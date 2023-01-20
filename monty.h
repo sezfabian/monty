@@ -47,6 +47,9 @@ int isint(char s[]);
 void operations(char **tokens, stack_t **heads, int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void exit_function();
+void free_list(stack_t *head);
 
 #endif
 

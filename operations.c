@@ -14,6 +14,7 @@ void operations(char **tokens, stack_t **heads, int line_number)
 	instruction_t ops[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL}
 	};
 	int i, x = 0;
@@ -35,8 +36,7 @@ void operations(char **tokens, stack_t **heads, int line_number)
 				if (isint(tokens[1]) == 0)
 				{
 					fprintf(stderr, "L%d: usage: push integer", line_number);
-					printf("\n");
-					exit(EXIT_FAILURE);
+					exit_function();
 				}
 			}
 			else
@@ -48,7 +48,7 @@ void operations(char **tokens, stack_t **heads, int line_number)
 	if (ops[i].opcode == NULL)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s", line_number, tokens[0]);
-		printf("\n");
-		exit(EXIT_FAILURE);
+		exit_function();
 	}
 }
+
