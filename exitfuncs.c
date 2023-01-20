@@ -7,7 +7,6 @@
 
 void exit_function(void)
 {
-	printf("\n");
 	free_list(mystack);
 	exit(EXIT_FAILURE);
 }

@@ -35,7 +35,7 @@ void operations(char **tokens, stack_t **heads, int line_number)
 				x = atoi(tokens[1]);
 				if (isint(tokens[1]) == 0)
 				{
-					fprintf(stderr, "L%d: usage: push integer", line_number);
+					fprintf(stderr, "L%d: usage: push integer\n", line_number);
 					exit_function();
 				}
 			}
@@ -47,7 +47,7 @@ void operations(char **tokens, stack_t **heads, int line_number)
 	}
 	if (ops[i].opcode == NULL)
 	{
-		fprintf(stderr, "L%d: unknown instruction %s", line_number, tokens[0]);
+		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, tokens[0]);
 		exit_function();
 	}
 }
