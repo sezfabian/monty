@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	}
 	if (stat(argv[1], &filestat) != 0)
 	{
-		fprintf(stderr, "ERROR: Can't open file %s\n", argv[1]);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit_function();
 	}
 	fptr = fopen(argv[1], "r");
